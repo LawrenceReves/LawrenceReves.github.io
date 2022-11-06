@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  /* min-height: 100vh; */
+  background-color: #000;
+  color: #D2D2D2;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+p {
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.page-links {
+  display: flex;
+}
+
+.hamburger {
+  display: none;
+}
+
+.spread-left {
+  display: flex;
+}
+
+.spread-right {
+  display: flex;
+}
+
+.nav-logo {
+  width: 39px;
+}
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.sub-head {
+  margin-left: 10px;
+}
+.sub-head:hover {
+  color: inherit;
+}
+
+nav a {
+  text-decoration: none;
+  color: #D2D2D2;
+  margin-top: -4px;
+}
+nav a:hover {
+  color: #fff;
+}
+
+.nav-sep {
+  color: #D2D2D2;
+  margin: 0px;
+  padding: 0px;
+  margin-top: -4px;
+}
+
+.homepage-main {
+  min-height: 100vh;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 72px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 39px;
+  text-align: center;
+}
+
+
+.projects-main {
+  margin: 20px;
+}
+
+.full-image {
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.half-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.half-image {
+  width: 45%;
+  margin: 30px 0px;
+}
+
+.projects-footer {
+  margin: 20px 20px 20px 20px;
+}
+
+.to-top-button {
+  padding: 0px;
+  background-color: inherit;
+  border: none;
+  font-size: 24px;
+  color: #D2D2D2;
+  font-family: 'Nanum Myeongjo', serif;
+}
+.to-top-button:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+
+.about-page {
+  width: 100vw;
+  height: calc(100vh - 30px);
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#about-profile {
+  width: 100%;
+}
+
+
+
+
+/* . */
+/* HOMEPAGE */
+/* . */
+.main-content-block {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 108px);
+	margin: 0px 34px;
+	width: calc(100vw - 68px);
+}
+
+.main-content-block a {
+	font-family: "Nanum Myeongjo", Sans-serif;
+	font-size: calc(2.8vw + 20px);
+/* 	font-size: 72px; */
+	line-height: calc(2.8vw + 28px);
+/* 	color: #D2D2D2; */
+/* 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+.inner-proj-link {
+	color: #D2D2D2;
+	height: 100%;
+  text-decoration: none;
+}
+
+.project-links p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.main-content-block a:hover {
+	color: #424242;
+}
+
+.main-content-block .project-images {
+	visibility: hidden;
+	height: 100vh;
+	max-height: 70vh;
+	width: 100vw;
+	max-width: 60vw;
+	background: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: -70px;
+}
+
+.main-content-block .project-links {
+/* 	transform: translateY(-100%); */
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 5;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+/* . */
+/* TABLET */
+/* . */
+@media only screen and (max-width: 768px) {
+  .page-links {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .page-links a {
+    width: 150px;
+    font-size: 38px;
+  }
+
+  .spread-left {
+    z-index: 20;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 20;
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+
+  .about-page {
+    flex-direction: column;
+    margin: 20px;
+    height: calc(100vh - 40px - 50px);
+    width: calc(100vw - 40px);
+  }
+
+  #about-profile {
+    max-width: 400px;
+  }
+}
+
+
+/* . */
+/* MOBILE */
+/* . */
+@media only screen and (max-width: 480px) {
+  .about-page {
+    flex-direction: column;
+    margin: 16px;
+    height: calc(100vh - 32px - 50px);
+    width: calc(100vw - 32px);
+  }
+
+  #about-profile {
+    max-width: 400px;
+  }
+}

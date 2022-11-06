@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lawrence Reves</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav>
+      <div class="spread-left">
+        <a href="index.html"><img class="nav-logo" src="images/logo.png" alt="logo"></a>
+        <a class="sub-head" href="index.html">LR - 2022</a>
+      </div>
+
+      <div class="spread-right">
+        <div class="page-links">
+          <a id="about-link" href="about.html">About</a>
+          <a id="project-page-link" href="index.html">/Projects</a>
+          <a id="contact-link" href="about.html">/Contact</a>
+        </div>
+        <img class="hamburger" src="images/Hamburger.png" alt="">
+      </div>
+    </nav>
+
+    <div class="main-content-block">
+    	<div class="project-images" id="main-background-image">
+    	</div>
+
+    	<div class="project-links">
+    			<p><a class="inner-proj-link" onmouseover="babyShow(id)" onmouseout="backgroundReset(id)" id="babybrew" href="projects/baby.html">(01)Baby Brew Co.  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="bendShow(id)" onmouseout="backgroundReset(id)" id="project-bend" href="projects/bend.html">(02)Bend  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="ircomShow(id)" onmouseout="backgroundReset(id)" id="ircom-link" href="projects/ircom.html">(03)IRCOM  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="miboShow(id)" onmouseout="backgroundReset(id)" id="mibo-link" href="projects/mibo.html">(04)MI.BO.SO  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="mycelShow(id)" onmouseout="backgroundReset(id)" id="mycel-link" href="projects/myceliyum.html">(05)Myceliyum  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="redRiverShow(id)" onmouseout="backgroundReset(id)" id="river-link" href="projects/rre.html">(06)Red River Ex  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="theyShow(id)" onmouseout="backgroundReset(id)" id="they-link" href="projects/they.html">(07)They.  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="verdeShow(id)" onmouseout="backgroundReset(id)" id="verde-link" href="projects/verde.html">(08)Verde  </a></p>
+    			<p><a class="inner-proj-link" onmouseover="takePrideShow(id)" onmouseout="backgroundReset(id)" id="pride-link" href="projects/pride.html">(09)Take Pride Winnipeg  </a></p>
+    	</div>
+
+    </div>
+
+		<script type="text/javascript">
+				let projectsArray = ["babybrew", "project-bend", "ircom-link", "mibo-link", "mycel-link", "river-link", "they-link", "verde-link", "pride-link"];
+
+				function bendShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/Bend.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function takePrideShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/TPW.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function verdeShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/Verde.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function ircomShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/IRCOM.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function theyShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/they.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function redRiverShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/RRE.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function babyShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/babybrew.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function miboShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/MIBOSO.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function mycelShow(projectId) {
+					document.getElementById("main-background-image").style.backgroundImage = "url('images/homepage/Myceliyum.png')";
+					document.getElementById("main-background-image").style.visibility = "visible";
+					setLinks();
+					document.getElementById(projectId).style.color = "#D2D2D2";
+				}
+
+				function setLinks(projectId) {
+					for(let i=0; i<projectsArray.length; i++){
+						document.getElementById(projectsArray[i]).style.color = "#424242";
+					}
+				}
+
+				function backgroundReset(projectId) {
+					document.getElementById("main-background-image").style.visibility = "hidden";
+
+					for(let i=0; i<projectsArray.length; i++){
+						document.getElementById(projectsArray[i]).style.color = "#D2D2D2";
+					}
+				}
+		</script>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
