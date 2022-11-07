@@ -1,17 +1,38 @@
 let menu = document.getElementsByClassName('hamburger')[0];
 let menuOn = false;
+let curPage = window.location.pathname;
+
 menu.addEventListener('click', showMenu);
 
 function showMenu(){
   if(!menuOn) {
     document.getElementsByClassName('page-links')[0].style.visibility = "visible";
+    window.onscroll = function () { window.scrollTo(0, 0); };
+
+    if(curPage.includes("projects")){
+      menu.src="../images/exit.png";
+    }
+    else {
+      menu.src="images/exit.png";
+    }
+
     menuOn = true;
   }
   else {
     document.getElementsByClassName('page-links')[0].style.visibility = "hidden";
+    window.onscroll=function(){};
+
+    if(curPage.includes("projects")){
+      menu.src="../images/Hamburger.png";
+    }
+    else {
+      menu.src="images/Hamburger.png";
+    }
+
     menuOn = false;
   }
 }
+
 
 // .
 // Navigation link hovers
