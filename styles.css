@@ -16,7 +16,7 @@ p {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 20px 20px;
   font-size: 24px;
   font-weight: 500;
@@ -28,6 +28,7 @@ nav {
 
 .hamburger {
   display: none;
+  margin-top: -2px;
 }
 
 .spread-left {
@@ -40,6 +41,7 @@ nav {
 
 .nav-logo {
   width: 39px;
+  margin: 0px;
 }
 .nav-logo:hover {
   cursor: pointer;
@@ -66,6 +68,11 @@ nav a:hover {
   margin: 0px;
   padding: 0px;
   margin-top: -4px;
+}
+
+#logo-link {
+  margin: 0px;
+  height: 100%;
 }
 
 .homepage-main {
@@ -252,6 +259,11 @@ h4 {
 
   #about-profile {
     max-width: 400px;
+  }
+
+  .main-content-block {
+  	margin: 0px 20px;
+  	width: calc(100vw - 40px);
   }
 }
 
